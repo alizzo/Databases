@@ -132,8 +132,8 @@ INSERT INTO `Health_Insurance` VALUES ( 'LMFV23' , 30412530415,'Medicare HMO', 4
 
 CREATE TABLE `Physician` (
 	`Employee_ID` char(7) NOT NULL,
-	`Employee_First_Name` varchar(60) NOT NULL,
-	`Employee_Last_Name` varchar(60) NOT NULL,
+	`Employee First Name` varchar(60) NOT NULL,
+	`Employee Last Name` varchar(60) NOT NULL,
 	`Employee Title` varchar(30) NOT NULL,
     `Clinical_Hours` DECIMAL(6,2),
 	`Administrative_Hours` DECIMAL(6,2),
@@ -233,10 +233,10 @@ INSERT INTO `Internal_Physician`  VALUES ( '6066063');
 INSERT INTO `Internal_Physician`  VALUES ( '6066064');
 
 CREATE TABLE `GME_Physician` (
-	`Student_ID` char(8) NOT NULL,
-	`Student_Major` varchar(60) NOT NULL,
+	`Student ID` char(8) NOT NULL,
+	`Student Major` varchar(60) NOT NULL,
     `Employee_ID` char(7) NOT NULL,
-		Constraint GME_Physician_PK PRIMARY KEY (`Student_ID`),
+		Constraint GME_Physician_PK PRIMARY KEY (`Student ID`),
 		Constraint GME_Physician_FK  FOREIGN KEY (`Employee_ID`) REFERENCES `Physician` (`Employee_ID`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -244,7 +244,6 @@ INSERT INTO `GME_Physician`  VALUES (77777777,'Newborn / Obsetrics', '6066069' )
 INSERT INTO `GME_Physician`  VALUES (77777778 ,'General Medicine','6066070');   
 INSERT INTO `GME_Physician`  VALUES (77777779,'Occupational Therapist' , '6066071');
 INSERT INTO `GME_Physician`  VALUES (77777780,'Orthopedic Sports Specialist','6066072');
-
 
 
 

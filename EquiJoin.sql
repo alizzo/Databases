@@ -1,0 +1,4 @@
+-- equi-join
+SELECT Patient.Financial_Identification_Number, Department.Financial_Identification_Number, Patient_First_Name
+FROM Patient, Department
+WHERE Patient.Financial_Identification_Number = Department.Financial_Identification_Number
